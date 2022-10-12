@@ -21,7 +21,7 @@ declare global {
   }
 }
 
-const sphere = ({ offset = 0, ...props }) => {
+const Sphere = ({ offset = 0, ...props }) => {
   const ref = React.useRef<THREE.Group>();
   useFrame(({ clock }) => {
     ref.current!.position.y = Math.sin(offset + clock.elapsedTime) * 5;
@@ -43,6 +43,7 @@ const Scene = () => {
   return (
     <>
       <fog attach="fog" args={["#f0f0f0", 100, 200]} />
+      <Sphere position={[-10, 10, 0]} />
       <Box material-color="hotpink" args={[5, 5, 5]} position-y={2.5} />
       <gridHelper args={[100, 10]} />
     </>
