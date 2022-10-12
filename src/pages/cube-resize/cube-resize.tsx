@@ -5,7 +5,7 @@ import { Box, CubeCamera } from "@react-three/drei";
 import { Vector3 } from "three";
 import { Setup } from "./Setup";
 
-const Showcase = () => {
+const CubeResize = () => {
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
       <Setup cameraPosition={new Vector3(0, 10, 40)}>{Scene()}</Setup>
@@ -50,4 +50,4 @@ const Scene = () => {
   );
 };
 
-export default Showcase;
+export default CubeResize;
